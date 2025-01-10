@@ -6,11 +6,14 @@ import (
 	"net/http"
 
 	"github.com/MakoskiVictor/Go-CRUD/db"
+	"github.com/MakoskiVictor/Go-CRUD/enviroments"
 	"github.com/MakoskiVictor/Go-CRUD/routes"
 	"github.com/gorilla/mux"
 )
 
 func main() {
+	// Cargar archivos env
+	enviroments.LoadEnvs()
 	// Conectar a la DB
 	database, err := db.Connect()
 	if err != nil {
