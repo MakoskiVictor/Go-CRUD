@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 
@@ -21,8 +20,6 @@ func main() {
 	}
 
 	defer database.Close() // Cierra la conexión a la base de datos al finalizar la función main
-
-	fmt.Println("Conexión exitosa a la base de datos")
 
 	r := mux.NewRouter() // Crea un nuevo router con gorilla/mux
 
